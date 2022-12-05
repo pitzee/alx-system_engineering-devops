@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/passwd
+/etc/passwd find . -type f -print | wc -l
