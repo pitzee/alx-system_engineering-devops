@@ -9,3 +9,4 @@ do
         echo "Best School"
         n=$(($n+1))
 done
+n=$n
