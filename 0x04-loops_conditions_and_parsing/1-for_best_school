@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
+n=0
 
-for i in {1..10}
+for n in {1..10}
 do
         echo "Best School"
 done
+n=$n
