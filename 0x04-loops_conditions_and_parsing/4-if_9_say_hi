@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 9 times and print hi at 9 th position 
+n=1
+while [ "$n" -le 10 ]
+do
+    echo "Holberton School"
+    if [ "$n" -eq 9 ]
+    then
+        echo "Hi"
+    fi
+    n=$((n + 1))
+done
+n=$n
