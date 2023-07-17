@@ -37,20 +37,19 @@ frontend haproxy_balancer
          bind *:80
          mode http
          default_backend web-servers
-
 frontend https
-        bind *:443 ssl crt /etc/letsencrypt/live/www.pridestore.tech/cert.pem
-        http-request add-header X-Forwarded-Proto https
-        default_backend web_servers
+    bind *:443 ssl crt /etc/letsencrypt/live/www.pridestore.tech/cert.pem
+    http-request add-header X-Forwarded-Proto https
+    default_backend web_servers
 
 backend web-servers
         balance roundrobin
         option forwardfor
-        server 4288-web-01 3.83.238.226:80 check
-        server 4288-web-02 34.202.234.56:80 check
+        server 4288-web-01 100.26.210.173:80 check
+        server 4288-web-02 54.237.97.143:80 check
 
 backend web_servers
-        balance roundrobin
-        server 4288-web-01 3.83.238.226:80 check
-        server 4288-web-02 34.202.234.56:80 check
+    balance roundrobin
+    server 4288-web-01 100.26.210.173:80 check
+    server 4288-web-02 54.237.97.143:80 check
 
