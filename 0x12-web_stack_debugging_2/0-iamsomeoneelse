@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 #run a command as an especific user
+#Bash script that accepts one argument
 
 sudo -u "$1" whoami
